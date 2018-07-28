@@ -8,7 +8,7 @@ class ProductosController < ApplicationController
        @producto = Producto.new(productos_params)       
        @producto.user_id = current_user.id
        
-       if @producto.save!
+       if @producto.save
         redirect_to new_producto_path
       else
         render :new
