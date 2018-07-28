@@ -1,0 +1,25 @@
+<div class="container">
+Usuario:<%= current_user.id %>
+<%= form_for @producto do |f| %>
+    <div class="form-group">
+    <%= f.label :nombre, :for=>"nameField" %><br>
+    <%= f.text_field :nombre, :class=>"form-control", :id=>"nameField",placeholder: "Ingrese Nombre del Producto" %>
+    </div>
+    <div class="form-group">
+    <%= f.label :descripcion, :for=>"descField" %><br>
+    <%= f.text_field :descripcion, :class=>"form-control", :id=>"descField" ,placeholder: "Ingrese Descripción del producto" %>
+    </div>
+    <div class="form-group">
+    <%= f.label :estado, :for=>"estField" %><br>
+    <%= f.text_field :estado, :class=>"form-control", :id=>"estField" ,placeholder: "Estado" %>
+    </div>
+       
+    <ul class="list-inline">
+<%= f.submit 'Create', :class=>"btn btn-success" %>
+<%= button_tag "Reset", type: :reset, :class=>"btn btn-default" %>
+
+</ul>
+    
+ <% end %>   
+ </div>
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_material: MyString
+  descripcion: MyString
+  string: MyString
+  estado: MyString
+  string: MyString
+
+two:
+  id_material: MyString
+  descripcion: MyString
+  string: MyString
+  estado: MyString
+  string: MyString

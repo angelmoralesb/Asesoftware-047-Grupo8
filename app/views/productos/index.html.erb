@@ -1,0 +1,26 @@
+<div class="container">
+<h3> Listado de Producto </h3>
+<div class="form-group">
+<section class="search-results">
+<header>
+<h4 class="h3">Results</h4>
+</header>
+<ol class="list-group">
+<% @productos.each do |producto| %>
+<li class="list-group-item">
+<div class="form-group">
+<label for="codigoprd">Codigo producto:</label>
+ <%= producto.id %>
+ <label for="cnomprd">Nombre producto:</label>
+ <%= producto.nombre %>
+ <label for="descprd">Descripción producto:</label>
+<%= producto.descripcion %>
+</div>
+Joined <%= l producto.created_at.to_date %>
+</li>
+<% end %>
+</ol>
+</section
+</div>
+</div>
+
