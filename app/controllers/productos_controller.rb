@@ -1,9 +1,16 @@
 class ProductosController < ApplicationController
+  require 'json_web_token'
+    skip_before_action :verify_authenticity_token
     def new
+      
+      
         @producto = Producto.new
+      
      end
     
      def create
+
+      
        
        @producto = Producto.new(productos_params)       
        @producto.user_id = current_user.id

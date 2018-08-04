@@ -17,6 +17,9 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 #gem 'duktape'
+#jwt
+gem 'jwt'
+gem 'rack-cors'
 # device
 gem 'devise'
 # Use CoffeeScript for .coffee assets and views

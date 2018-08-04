@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show]
       resources :productos, only: [:index]
+      devise_scope :user do
+      match '/sessions' => 'sessions#create', via: :post
+      match '/sessions' => 'sessions#destroy', via: :delete
+      end
     end
   end
   root to: "page#index"
