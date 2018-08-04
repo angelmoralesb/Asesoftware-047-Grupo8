@@ -1,1 +1,1 @@
-json.array! @users
+json.array! @user
