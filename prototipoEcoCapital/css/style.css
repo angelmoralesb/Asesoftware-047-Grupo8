@@ -2,8 +2,10 @@
     width: 100%;
  
 }
-
+body{
+    background-image: url('/assets/fondo.png');
+    }
 
 a.navbar-brand.letraNav, a.nav-item.nav-link.active.letraNav, a.nav-item.nav-link.letraNav{
-    color: #f8f9fa;
+    color: #117a8b;
 }
