@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: postgres
-  password: admin
+  username: postgres # para pablo: postgres
+  password: admin # para pablo: admin
   timeout: 5000
 
 development:
