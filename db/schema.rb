@@ -15,6 +15,22 @@ ActiveRecord::Schema.define(version: 2018_07_28_201800) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "eco_materials", force: :cascade do |t|
+    t.string "id_material"
+    t.string "descripcion"
+    t.string "string"
+    t.string "estado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "eco_productos", force: :cascade do |t|
+    t.string "id_producto"
+    t.string "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "productos", force: :cascade do |t|
     t.string "nombre", limit: 100
     t.string "descripcion", limit: 200
