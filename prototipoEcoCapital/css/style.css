@@ -4,8 +4,12 @@
 }
 body{
     background-image: url('/assets/fondo.png');
+    color: blanchedalmond;
     }
-
+    .navbar-default {
+        border-color: white;
+        background-color: #FF2032;
+     }
 a.navbar-brand.letraNav, a.nav-item.nav-link.active.letraNav, a.nav-item.nav-link.letraNav{
     color: #117a8b;
 }

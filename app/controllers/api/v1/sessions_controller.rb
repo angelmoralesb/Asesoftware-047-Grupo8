@@ -16,7 +16,7 @@ class Api::V1::SessionsController < Devise::SessionsController
         
     end
     def jwt_token(user)
-        JsonWebToken.encode(user)
+        JsonWebToken.encode({id: user.id, email: user.email})
     end
 
     private
