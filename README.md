@@ -1,4 +1,4 @@
-# EcoCapital : https://serieux-gerard-43472.herokuapp.com/
+# EcoCapital : https://proyectoecocapital.herokuapp.com/
 
 ## Asesoftware-047-Grupo8
 
