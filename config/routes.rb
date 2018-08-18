@@ -17,12 +17,15 @@ Rails.application.routes.draw do
         match '/productos' => 'productos#create', via: :post
         match '/productos' => 'productos#destroy', via: :delete
         end
-        authenticated :user do
-          root 'page#index', as: :authenticated_root
-        end
+        
     end
   end
-  
-  root to: 'page#index'
+  authenticated :user do
+    root 'page#index', as: :authenticated_root
+  end
+  unauthenticated do
+    root 'devise/sessions#new', as: :unauthenticated_root
+  end
+  #root to: redirect ('devise/sessions#new')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
