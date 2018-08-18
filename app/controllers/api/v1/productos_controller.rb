@@ -14,7 +14,7 @@ class Api::V1::ProductosController < Api::V1::BaseController
    end   
     def create
        
-      producto = Producto.new(productos_params)      
+      producto = Producto.new(productos_params)       
       producto.user_id = @current_user
       if producto.save
         render json: {status: 'SUCCES', message:'producto', data:producto},status: :ok 

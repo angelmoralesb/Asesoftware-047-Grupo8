@@ -12,13 +12,17 @@ Rails.application.routes.draw do
       match '/sessions' => 'sessions#create', via: :post
       match '/sessions' => 'sessions#destroy', via: :delete
       end
+      
       devise_scope :productos do
         match '/productos' => 'productos#create', via: :post
         match '/productos' => 'productos#destroy', via: :delete
         end
+        authenticated :user do
+          root 'page#index', as: :authenticated_root
+        end
     end
   end
-  root to: ('page#index')
-  #root to: redirect ("devise/sessions#new")
+  
+  root to: 'page#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
